@@ -34,7 +34,7 @@ return {
     "folke/which-key.nvim",
     opts = {
       ---@type false | "classic" | "modern" | "helix"
-      preset = "classic",
+      preset = "modern",
       sort = { "local", "order", "group", "alphanum", "mod" },
     },
   },
@@ -67,12 +67,12 @@ return {
         preset = {
           -- customize the dashboard header
           header = table.concat({
-          " ██████╗ ██████╗  █████╗  ██████╗████████╗██╗ ██████╗ █████╗ ██╗     ██╗     ██╗",
-          " ██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██║██╔════╝██╔══██╗██║     ██║     ██║",
-          " ██████╔╝██████╔╝███████║██║        ██║   ██║██║     ███████║██║     ██║     ██║",
-          " ██╔═══╝ ██╔══██╗██╔══██║██║        ██║   ██║██║     ██╔══██║██║     ██║     ██║",
-          " ██║     ██║  ██║██║  ██║╚██████╗   ██║   ██║╚██████╗██║  ██║███████╗███████╗██║",
-          " ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝",
+            " ██████╗ ██████╗  █████╗  ██████╗████████╗██╗ ██████╗ █████╗ ",
+            " ██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██║██╔════╝██╔══██╗",
+            " ██████╔╝██████╔╝███████║██║        ██║   ██║██║     ███████║",
+            " ██╔═══╝ ██╔══██╗██╔══██║██║        ██║   ██║██║     ██╔══██║",
+            " ██║     ██║  ██║██║  ██║╚██████╗   ██║   ██║╚██████╗██║  ██║",
+            " ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝",
           }, "\n"),
         },
       },
@@ -81,6 +81,7 @@ return {
       indent = { enabled = false },
 
       notifier = {
+        -- Keep AstroNvim default style for proper code change notifications
         -- log level: TRACE DEBUG ERROR WARN INFO  OFF
         level = vim.log.levels.WARN,
         -- wrap words in picker right panel
@@ -88,6 +89,116 @@ return {
       },
     },
   },
+
+  -- Claude Code integrations - testing both plugins
+
+  -- Original claude-code plugin (terminal-based)
+  {
+    "greggh/claude-code.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("claude-code").setup {
+        -- Terminal window settings
+        window = {
+          split_ratio = 0.45, -- Percentage of screen for the terminal window (height for horizontal, width for vertical splits)
+          position = "vertical", -- Position of the window: "botright", "topleft", "vertical", "float", etc.
+          enter_insert = true, -- Whether to enter insert mode when opening Claude Code
+          hide_numbers = true, -- Hide line numbers in the terminal window
+          hide_signcolumn = true, -- Hide the sign column in the terminal window
+
+          -- Floating window configuration (only applies when position = "float")
+          float = {
+            width = "80%", -- Width: number of columns or percentage string
+            height = "80%", -- Height: number of rows or percentage string
+            row = "center", -- Row position: number, "center", or percentage string
+            col = "center", -- Column position: number, "center", or percentage string
+            relative = "editor", -- Relative to: "editor" or "cursor"
+            border = "rounded", -- Border style: "none", "single", "double", "rounded", "solid", "shadow"
+          },
+        },
+        -- File refresh settings
+        refresh = {
+          enable = true, -- Enable file change detection
+          updatetime = 100, -- updatetime when Claude Code is active (milliseconds)
+          timer_interval = 1000, -- How often to check for file changes (milliseconds)
+          show_notifications = true, -- Show notification when files are reloaded
+        },
+        -- Git project settings
+        git = {
+          use_git_root = true, -- Set CWD to git root when opening Claude Code (if in git project)
+        },
+        -- Shell-specific settings
+        shell = {
+          separator = "&&", -- Command separator used in shell commands
+          pushd_cmd = "pushd", -- Command to push directory onto stack (e.g., 'pushd' for bash/zsh, 'enter' for nushell)
+          popd_cmd = "popd", -- Command to pop directory from stack (e.g., 'popd' for bash/zsh, 'exit' for nushell)
+        },
+        -- Command settings
+        command = "claude", -- Command used to launch Claude Code
+        -- Command variants
+        command_variants = {
+          -- Conversation management
+          continue = "--continue", -- Resume the most recent conversation
+          resume = "--resume", -- Display an interactive conversation picker
+
+          -- Output options
+          verbose = "--verbose", -- Enable verbose logging with full turn-by-turn output
+        },
+        -- Keymaps
+        keymaps = {
+          toggle = {
+            normal = "<C-,>", -- Normal mode keymap for toggling Claude Code, false to disable
+            terminal = "<C-,>", -- Terminal mode keymap for toggling Claude Code, false to disable
+            variants = {
+              continue = "<leader>cC", -- Normal mode keymap for Claude Code with continue flag
+              verbose = "<leader>cV", -- Normal mode keymap for Claude Code with verbose flag
+            },
+          },
+          window_navigation = true, -- Enable window navigation keymaps (<C-h/j/k/l>)
+          scrolling = true, -- Enable scrolling keymaps (<C-f/b>) for page up/down
+        },
+      }
+    end,
+  },
+  -- Advanced claude-code plugin (WebSocket-based, protocol compatible)
+  {
+    "coder/claudecode.nvim",
+    dependencies = { "folke/snacks.nvim" },
+    config = true,
+    -- Terminal Configuration
+    terminal = {
+      split_side = "right", -- "left" or "right"
+      split_width_percentage = 0.45,
+      provider = "auto", -- "auto", "snacks", "native", "external", or custom provider table
+      auto_close = true,
+      snacks_win_opts = {}, -- Opts to pass to `Snacks.terminal.open()` - see Floating Window section below
+
+      -- Provider-specific options
+      provider_opts = {
+        external_terminal_cmd = nil, -- Command template for external terminal provider (e.g., "alacritty -e %s")
+      },
+    },
+    keys = {
+      { "<leader>a", nil, desc = "AI/Claude Code" },
+      { "<leader>ac", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
+      { "<leader>af", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
+      { "<leader>ar", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
+      { "<leader>aC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
+      { "<leader>am", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
+      { "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
+      { "<leader>as", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
+      {
+        "<leader>as",
+        "<cmd>ClaudeCodeTreeAdd<cr>",
+        desc = "Add file",
+        ft = { "NvimTree", "neo-tree", "oil", "minifiles" },
+      },
+      -- Diff management
+      { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
+      { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
+    },
+  },
+
   -- ------------------------------------------
 
   -- disable paredit
@@ -105,11 +216,11 @@ return {
       timeout = vim.o.timeoutlen,
       default_mappings = false,
       mappings = {
-      i = { [","] = { ["."] = "<Esc>" } },
-      c = { [","] = { ["."] = "<Esc>" } },
-      t = { [","] = { ["."] = "<Esc>" } },
-      v = { [","] = { ["."] = "<Esc>" } },
-      s = { [","] = { ["."] = "<Esc>" } },
+        i = { [","] = { ["."] = "<Esc>" } },
+        c = { [","] = { ["."] = "<Esc>" } },
+        t = { [","] = { ["."] = "<Esc>" } },
+        v = { [","] = { ["."] = "<Esc>" } },
+        s = { [","] = { ["."] = "<Esc>" } },
       },
     },
   },
@@ -152,15 +263,20 @@ return {
       options = {
         -- configure general options: vim.opt.<key>
         opt = {
-          spell = true, -- sets vim.opt.spell
+          spell = false, -- disable spell checker
           wrap = true, -- sets vim.opt.wrap
           guifont = "Monoplex Nerd:h14", -- neovide font family & size
+          undofile = false, -- disable persistent undo to avoid unnecessary session modifications
+          formatoptions = "jql", -- disable automatic comment continuation (remove 'r' and 'o')
         },
         -- configure global vim variables: vim.g
         g = {
           -- Neovim language provides - disable language integration not required
           loaded_perl_provider = 0,
           loaded_ruby_provider = 0,
+
+          -- Disable autoformatting on save to preserve diff visibility
+          autoformat_enabled = false,
 
           -- Leader key for Visual-Multi Cursors (Multiple Cursors)
           VM_leader = "gm", -- Visual Multi Leader (multiple cursors - user plugin)
@@ -211,6 +327,27 @@ return {
           -- Save prompting for file name
           ["<Leader>W"] = { ":write ", desc = "Save as file" },
 
+          -- Doom Emacs style file operations
+          ["<Leader>fs"] = { "<cmd>write<cr>", desc = "Save file" },
+          ["<Leader>fr"] = { function() require("snacks").picker.recent() end, desc = "Recent files" },
+
+          -- Doom Emacs style buffer operations
+          ["<Leader>bd"] = { function() require("astrocore.buffer").close() end, desc = "Kill buffer" },
+          ["<Leader>bD"] = { function() require("astrocore.buffer").close(0, true) end, desc = "Force kill buffer" },
+
+          -- Tab key for matching bracket jump (like %)
+          ["<Tab>"] = { "%", desc = "Jump to matching bracket" },
+
+
+          -- Claude Code project management
+          ["<Leader>cp"] = { function() vim.cmd "edit ~/.claude.json" end, desc = "Claude projects" },
+
+          -- Claude Code plugin commands
+          ["<Leader>cc"] = { "<cmd>ClaudeCode<cr>", desc = "Toggle Claude Code (greggh)" },
+
+          -- MCP Management
+          ["<Leader>cm"] = { "<cmd>MCPHub<cr>", desc = "MCP Hub" },
+
           -- Gist Creation
           ["<Leader>gj"] = { ":GistCreateFromFile ", desc = "Create Gist (file)" },
           ["<Leader>gJ"] = { "<cmd>GistsList<cr>", desc = "List Gist" },
@@ -227,6 +364,7 @@ return {
         },
         t = {
           -- terminal mode key bindings
+          -- ["<M-m>"] = "<C-\\><C-n>:lua require('which-key').show('SPC')<CR>",
         },
         v = {
           -- visual mode key bindings
@@ -235,5 +373,93 @@ return {
         },
       },
     },
+  },
+
+  -- Disable session auto-saving to prevent unnecessary modifications
+  {
+    "stevearc/resession.nvim",
+    opts = {
+      autosave = {
+        last = false, -- disable auto-save last session
+        cwd = false, -- disable auto-save current directory session
+      },
+    },
+  },
+
+  -- Enhanced Tree-sitter configuration
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        -- Configuration & Data formats
+        "dockerfile",
+        "yaml",
+        "toml",
+        "json",
+        "json5",
+        "xml",
+        "html",
+        "css",
+        "scss",
+        "nix",
+        -- Programming languages
+        "javascript",
+        "typescript",
+        "tsx", -- jsx는 tsx에 포함됨
+        "go",
+        "rust",
+        "java",
+        "kotlin",
+        "python",
+        "ruby",
+        "php",
+        -- Shell & Tools
+        "bash",
+        "fish",
+        "powershell",
+        "regex",
+        "sql",
+        "graphql",
+        -- Markup & Documentation
+        "markdown",
+        "markdown_inline",
+        "rst",
+        "latex",
+        "bibtex",
+        -- Config files
+        "ini",
+        "gitignore",
+        "gitcommit",
+        "git_rebase",
+      },
+      -- Disable auto-install to avoid CLI error
+      auto_install = true,
+    },
+  },
+
+  -- MCP Hub for managing MCP servers
+  {
+    "ravitemer/mcphub.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    cmd = "MCPHub",
+    build = "npm install -g mcp-hub@latest",
+    config = function()
+      require("mcphub").setup {
+        -- Safe mode - no auto approval
+        auto_approve = false,
+        -- Claude configuration path
+        claude_config_path = "~/.claude.json",
+        -- Global environment variables for all MCP servers
+        global_env = {
+          -- 환경 변수에서 가져오기 (배열 스타일)
+          "DEFAULT_MINIMUM_TOKENS",
+          "GITHUB_TOKEN",
+          "ANTHROPIC_API_KEY",
+          -- 직접 값 설정 (해시 스타일)
+          PROJECT_ROOT = vim.fn.getcwd(),
+          NEOVIM_CONFIG = vim.fn.stdpath "config",
+        },
+      }
+    end,
   },
 }
