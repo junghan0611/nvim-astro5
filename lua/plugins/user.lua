@@ -96,6 +96,31 @@ return {
   { "gpanders/nvim-parinfer", enabled = false },
   { "julienvincent/nvim-paredit", enabled = false },
 
+  -- OSC 52 clipboard support for remote environments
+  {
+    "ojroques/nvim-osc52",
+    event = "VeryLazy",
+    config = function()
+      require('osc52').setup {
+        max_length = 0,      -- 무제한
+        silent = false,      -- 복사 알림 표시
+        trim = false,        -- 공백 유지
+        tmux_passthrough = true, -- tmux 지원
+      }
+      
+      -- SSH/Docker 환경에서 yank 시 자동 OSC 52 복사
+      if vim.env.SSH_CLIENT or vim.env.SSH_TTY or os.getenv("container") then
+        vim.api.nvim_create_autocmd('TextYankPost', {
+          callback = function()
+            if vim.v.event.operator == 'y' and vim.v.event.regname == '' then
+              require('osc52').copy_register('')
+            end
+          end
+        })
+      end
+    end,
+  },
+
   -- ------------------------------------------
   -- Editor tools
 
@@ -160,6 +185,8 @@ return {
           -- Monoplex Nerd:h14", -- neovide font family & size
           undofile = false, -- disable persistent undo to avoid unnecessary session modifications
           formatoptions = "jql", -- disable automatic comment continuation (remove 'r' and 'o')
+          -- OSC 52 clipboard support for remote/Docker environments
+          clipboard = "unnamedplus", -- use system clipboard
         },
         -- configure global vim variables: vim.g
         g = {
