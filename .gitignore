@@ -7,8 +7,11 @@
 
 # ------------------------
 # Ignore everything in root directory
-/*
+# /*
 # ------------------------
+
+.claude
+lazy-lock.json
 
 # ------------------------
 # Common project files
