@@ -59,7 +59,7 @@ return {
   -- ----------------------------------------------
   -- Packs (code-runner, treesitter, lsp & lint/format support)
 
-  { import = "astrocommunity.pack.clojure" },
+  -- { import = "astrocommunity.pack.clojure" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
   -- ----------------------------------------------
@@ -78,7 +78,7 @@ return {
   { import = "astrocommunity.recipes.neovide" },
 
   -- LSP Mappings for Snacks or Telescope
-  { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  -- { import = "astrocommunity.recipes.picker-lsp-mappings" },
   -- ----------------------------------------------
 
   -- ----------------------------------------------

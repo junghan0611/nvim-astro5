@@ -90,115 +90,6 @@ return {
     },
   },
 
-  -- Claude Code integrations - testing both plugins
-
-  -- Original claude-code plugin (terminal-based)
-  {
-    "greggh/claude-code.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("claude-code").setup {
-        -- Terminal window settings
-        window = {
-          split_ratio = 0.45, -- Percentage of screen for the terminal window (height for horizontal, width for vertical splits)
-          position = "vertical", -- Position of the window: "botright", "topleft", "vertical", "float", etc.
-          enter_insert = true, -- Whether to enter insert mode when opening Claude Code
-          hide_numbers = true, -- Hide line numbers in the terminal window
-          hide_signcolumn = true, -- Hide the sign column in the terminal window
-
-          -- Floating window configuration (only applies when position = "float")
-          float = {
-            width = "80%", -- Width: number of columns or percentage string
-            height = "80%", -- Height: number of rows or percentage string
-            row = "center", -- Row position: number, "center", or percentage string
-            col = "center", -- Column position: number, "center", or percentage string
-            relative = "editor", -- Relative to: "editor" or "cursor"
-            border = "rounded", -- Border style: "none", "single", "double", "rounded", "solid", "shadow"
-          },
-        },
-        -- File refresh settings
-        refresh = {
-          enable = true, -- Enable file change detection
-          updatetime = 100, -- updatetime when Claude Code is active (milliseconds)
-          timer_interval = 1000, -- How often to check for file changes (milliseconds)
-          show_notifications = true, -- Show notification when files are reloaded
-        },
-        -- Git project settings
-        git = {
-          use_git_root = true, -- Set CWD to git root when opening Claude Code (if in git project)
-        },
-        -- Shell-specific settings
-        shell = {
-          separator = "&&", -- Command separator used in shell commands
-          pushd_cmd = "pushd", -- Command to push directory onto stack (e.g., 'pushd' for bash/zsh, 'enter' for nushell)
-          popd_cmd = "popd", -- Command to pop directory from stack (e.g., 'popd' for bash/zsh, 'exit' for nushell)
-        },
-        -- Command settings
-        command = "claude", -- Command used to launch Claude Code
-        -- Command variants
-        command_variants = {
-          -- Conversation management
-          continue = "--continue", -- Resume the most recent conversation
-          resume = "--resume", -- Display an interactive conversation picker
-
-          -- Output options
-          verbose = "--verbose", -- Enable verbose logging with full turn-by-turn output
-        },
-        -- Keymaps
-        keymaps = {
-          toggle = {
-            normal = "<C-,>", -- Normal mode keymap for toggling Claude Code, false to disable
-            terminal = "<C-,>", -- Terminal mode keymap for toggling Claude Code, false to disable
-            variants = {
-              continue = "<leader>cC", -- Normal mode keymap for Claude Code with continue flag
-              verbose = "<leader>cV", -- Normal mode keymap for Claude Code with verbose flag
-            },
-          },
-          window_navigation = true, -- Enable window navigation keymaps (<C-h/j/k/l>)
-          scrolling = true, -- Enable scrolling keymaps (<C-f/b>) for page up/down
-        },
-      }
-    end,
-  },
-  -- Advanced claude-code plugin (WebSocket-based, protocol compatible)
-  {
-    "coder/claudecode.nvim",
-    dependencies = { "folke/snacks.nvim" },
-    config = true,
-    -- Terminal Configuration
-    terminal = {
-      split_side = "right", -- "left" or "right"
-      split_width_percentage = 0.45,
-      provider = "auto", -- "auto", "snacks", "native", "external", or custom provider table
-      auto_close = true,
-      snacks_win_opts = {}, -- Opts to pass to `Snacks.terminal.open()` - see Floating Window section below
-
-      -- Provider-specific options
-      provider_opts = {
-        external_terminal_cmd = nil, -- Command template for external terminal provider (e.g., "alacritty -e %s")
-      },
-    },
-    keys = {
-      { "<leader>a", nil, desc = "AI/Claude Code" },
-      { "<leader>ac", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
-      { "<leader>af", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
-      { "<leader>ar", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
-      { "<leader>aC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
-      { "<leader>am", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
-      { "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
-      { "<leader>as", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
-      {
-        "<leader>as",
-        "<cmd>ClaudeCodeTreeAdd<cr>",
-        desc = "Add file",
-        ft = { "NvimTree", "neo-tree", "oil", "minifiles" },
-      },
-      -- Diff management
-      { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
-      { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
-    },
-  },
-
   -- ------------------------------------------
 
   -- disable paredit
@@ -265,7 +156,8 @@ return {
         opt = {
           spell = false, -- disable spell checker
           wrap = true, -- sets vim.opt.wrap
-          guifont = "Monoplex Nerd:h14", -- neovide font family & size
+          guifont = "Sarasa Term K Nerd Font:13.5",
+          -- Monoplex Nerd:h14", -- neovide font family & size
           undofile = false, -- disable persistent undo to avoid unnecessary session modifications
           formatoptions = "jql", -- disable automatic comment continuation (remove 'r' and 'o')
         },
@@ -283,21 +175,21 @@ return {
 
           -- Conjure plugin overrides
           -- comment pattern for eval to comment command
-          ["conjure#eval#comment_prefix"] = ";; ",
-          -- Hightlight evaluated forms
-          ["conjure#highlight#enabled"] = false,
-
-          -- show HUD REPL log at startup
-          ["conjure#log#hud#enabled"] = false,
-
-          -- auto repl (babashka)
-          ["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false,
-          ["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = false,
-          ["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil,
-          ["conjure#client#clojure#nrepl#eval#auto_require"] = false,
-
-          -- Test runner: "clojure", "clojuresCRipt", "kaocha"
-          ["conjure#client#clojure#nrepl#test#runner"] = "kaocha",
+          -- ["conjure#eval#comment_prefix"] = ";; ",
+          -- -- Hightlight evaluated forms
+          -- ["conjure#highlight#enabled"] = false,
+          --
+          -- -- show HUD REPL log at startup
+          -- ["conjure#log#hud#enabled"] = false,
+          --
+          -- -- auto repl (babashka)
+          -- ["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false,
+          -- ["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = false,
+          -- ["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil,
+          -- ["conjure#client#clojure#nrepl#eval#auto_require"] = false,
+          --
+          -- -- Test runner: "clojure", "clojuresCRipt", "kaocha"
+          -- ["conjure#client#clojure#nrepl#test#runner"] = "kaocha",
 
           -- Troubleshoot: Minimise very long lines slow down:
           -- ["conjure#log#treesitter"] = false
@@ -338,15 +230,11 @@ return {
           -- Tab key for matching bracket jump (like %)
           ["<Tab>"] = { "%", desc = "Jump to matching bracket" },
 
-
           -- Claude Code project management
-          ["<Leader>cp"] = { function() vim.cmd "edit ~/.claude.json" end, desc = "Claude projects" },
-
-          -- Claude Code plugin commands
-          ["<Leader>cc"] = { "<cmd>ClaudeCode<cr>", desc = "Toggle Claude Code (greggh)" },
+          ["<Leader>ap"] = { function() vim.cmd "edit ~/.claude.json" end, desc = "Claude projects" },
 
           -- MCP Management
-          ["<Leader>cm"] = { "<cmd>MCPHub<cr>", desc = "MCP Hub" },
+          ["<Leader>am"] = { "<cmd>MCPHub<cr>", desc = "MCP Hub" },
 
           -- Gist Creation
           ["<Leader>gj"] = { ":GistCreateFromFile ", desc = "Create Gist (file)" },
@@ -361,6 +249,13 @@ return {
 
           -- Showkeys plugin (visualise key presses in Neovim window)
           ["<Leader>uk"] = { "<cmd>ShowkeysToggle<cr>", desc = "Toggle Showkeys" },
+
+          -- consult-line equivalent (current buffer line search)
+          -- ["."] = { function() require("snacks").picker.lines() end, desc = "Search lines in buffer" }, -- 동작안함
+        },
+        i = {
+          -- insert mode key bindings
+          ["<M-BS>"] = { "<C-w>", desc = "Delete word backward" },
         },
         t = {
           -- terminal mode key bindings
@@ -433,9 +328,123 @@ return {
         "git_rebase",
       },
       -- Disable auto-install to avoid CLI error
-      auto_install = true,
+      auto_install = false,
     },
   },
+
+  -- Claude Code integrations - testing both plugins
+
+  -- Original claude-code plugin (terminal-based)
+  {
+    "greggh/claude-code.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("claude-code").setup {
+        -- Terminal window settings
+        window = {
+          split_ratio = 0.50, -- Percentage of screen for the terminal window (height for horizontal, width for vertical splits)
+          position = "vertical", -- Position of the window: "botright", "topleft", "vertical", "float", etc.
+          enter_insert = true, -- Whether to enter insert mode when opening Claude Code
+          hide_numbers = true, -- Hide line numbers in the terminal window
+          hide_signcolumn = true, -- Hide the sign column in the terminal window
+
+          -- Floating window configuration (only applies when position = "float")
+          float = {
+            width = "80%", -- Width: number of columns or percentage string
+            height = "80%", -- Height: number of rows or percentage string
+            row = "center", -- Row position: number, "center", or percentage string
+            col = "center", -- Column position: number, "center", or percentage string
+            relative = "editor", -- Relative to: "editor" or "cursor"
+            border = "rounded", -- Border style: "none", "single", "double", "rounded", "solid", "shadow"
+          },
+        },
+        -- File refresh settings
+        refresh = {
+          enable = true, -- Enable file change detection
+          updatetime = 100, -- updatetime when Claude Code is active (milliseconds)
+          timer_interval = 1000, -- How often to check for file changes (milliseconds)
+          show_notifications = true, -- Show notification when files are reloaded
+        },
+        -- Git project settings
+        git = {
+          use_git_root = true, -- Set CWD to git root when opening Claude Code (if in git project)
+        },
+        -- Shell-specific settings
+        shell = {
+          separator = "&&", -- Command separator used in shell commands
+          pushd_cmd = "pushd", -- Command to push directory onto stack (e.g., 'pushd' for bash/zsh, 'enter' for nushell)
+          popd_cmd = "popd", -- Command to pop directory from stack (e.g., 'popd' for bash/zsh, 'exit' for nushell)
+        },
+        -- Command settings
+        command = "claude", -- Command used to launch Claude Code
+        -- Command variants
+        command_variants = {
+          -- Conversation management
+          continue = "--continue", -- Resume the most recent conversation
+          resume = "--resume", -- Display an interactive conversation picker
+
+          -- Output options
+          verbose = "--verbose", -- Enable verbose logging with full turn-by-turn output
+        },
+        -- Keymaps
+        keymaps = {
+          toggle = {
+            normal = "<C-,>", -- Normal mode keymap for toggling Claude Code, false to disable
+            terminal = "<C-,>", -- Terminal mode keymap for toggling Claude Code, false to disable
+            variants = {
+              continue = "<leader>aC", -- Normal mode keymap for Claude Code with continue flag
+              verbose = "<leader>aV", -- Normal mode keymap for Claude Code with verbose flag
+            },
+          },
+          window_navigation = true, -- Enable window navigation keymaps (<C-h/j/k/l>)
+          scrolling = true, -- Enable scrolling keymaps (<C-f/b>) for page up/down
+        },
+        keys = {
+          { "<leader>a", nil, desc = "AI/Claude Code" },
+          { "<leader>ac", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude(greggh)" },
+        },
+      }
+    end,
+  },
+
+  -- Advanced claude-code plugin (WebSocket-based, protocol compatible)
+  -- {
+  --   "coder/claudecode.nvim",
+  --   dependencies = { "folke/snacks.nvim" },
+  --   config = true,
+  --   -- Terminal Configuration
+  --   terminal = {
+  --     split_side = "right", -- "left" or "right"
+  --     split_width_percentage = 0.45,
+  --     provider = "auto", -- "auto", "snacks", "native", "external", or custom provider table
+  --     auto_close = true,
+  --     snacks_win_opts = {}, -- Opts to pass to `Snacks.terminal.open()` - see Floating Window section below
+  --
+  --     -- Provider-specific options
+  --     provider_opts = {
+  --       external_terminal_cmd = nil, -- Command template for external terminal provider (e.g., "alacritty -e %s")
+  --     },
+  --   },
+  --   keys = {
+  --     { "<leader>a", nil, desc = "AI/Claude Code" },
+  --     { "<leader>ac", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
+  --     { "<leader>af", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
+  --     { "<leader>ar", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
+  --     { "<leader>aC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
+  --     { "<leader>am", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
+  --     { "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
+  --     { "<leader>as", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
+  --     {
+  --       "<leader>as",
+  --       "<cmd>ClaudeCodeTreeAdd<cr>",
+  --       desc = "Add file",
+  --       ft = { "NvimTree", "neo-tree", "oil", "minifiles" },
+  --     },
+  --     -- Diff management
+  --     { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
+  --     { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
+  --   },
+  -- },
 
   -- MCP Hub for managing MCP servers
   {
