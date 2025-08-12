@@ -30,4 +30,13 @@ config.color_scheme = "Dracula (Official)"
 -- color_scheme = 'Sweet Eliverlara (Gogh)',
 config.audible_bell = "Disabled"
 
+-- ALT-RETURN 키 바인딩 비활성화 (Claude Code 멀티라인 키와 충돌 방지)
+config.keys = {
+	{
+		key = "Return",
+		mods = "ALT",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+}
+
 return config
