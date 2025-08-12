@@ -30,6 +30,11 @@ config.color_scheme = "Dracula (Official)"
 -- color_scheme = 'Sweet Eliverlara (Gogh)',
 config.audible_bell = "Disabled"
 
+-- 스크롤바 설정 (Claude Code를 위한 충분한 스크롤백)
+config.scrollback_lines = 10000
+config.enable_scroll_bar = true
+config.scroll_to_bottom_on_input = true
+
 -- ALT-RETURN 키 바인딩 비활성화 (Claude Code 멀티라인 키와 충돌 방지)
 config.keys = {
 	{
