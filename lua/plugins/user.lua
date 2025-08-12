@@ -187,6 +187,9 @@ return {
           formatoptions = "jql", -- disable automatic comment continuation (remove 'r' and 'o')
           -- OSC 52 clipboard support for remote/Docker environments
           clipboard = "unnamedplus", -- use system clipboard
+          -- Emacs evil-mode cursor behavior equivalents
+          ve = "", -- virtualedit: don't allow cursor beyond end of line (default "")
+          whichwrap = "", -- don't wrap cursor at line boundaries (default "b,s")
         },
         -- configure global vim variables: vim.g
         g = {
