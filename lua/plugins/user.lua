@@ -262,6 +262,7 @@ return {
 
           -- Claude Code project management
           ["<Leader>ap"] = { function() vim.cmd "edit ~/.claude.json" end, desc = "Claude projects" },
+          ["<Leader>an"] = { function() vim.cmd "terminal claude chat new" end, desc = "Claude chat new" },
 
           -- MCP Management
           ["<Leader>am"] = { "<cmd>MCPHub<cr>", desc = "MCP Hub" },
