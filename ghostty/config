@@ -1,0 +1,79 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /home/goqual/.config/ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+font-family = Sarasa Term K Nerd Font
+font-size = 17
+
+# 폰트 width 조정
+# adjust-cell-width = -6%
+
+# 윈도우 패딩 (좌/우)
+window-padding-x = 10,10
+
+# 윈도우 패딩 (상/하)
+window-padding-y = 10,10
+
+# shell integration : none
+shell-integration = none
+shell-integration-features = cursor, sudo, no-title
+
+# 창, pane 등을 닫을 때 확인창을 표시하지 않음.
+confirm-close-surface = false
+
+# 마우스 스크롤 멀티플라리어
+mouse-scroll-multiplier = 0.7
+
+# 투명도 설정 : 95%
+background-opacity = 0.90
+
+# GTK titlebar 숨김
+# gtk-titlebar = false
+# gtk-single-instance = true
+
+# theme
+# check theme : ghostty +list-themes
+window-theme = dark
+theme = catppuccin-mocha
+
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+
+# Remove Ctrl+, keybinding to allow Neovim Claude Code plugin to use it
+keybind = ctrl+comma=unbind

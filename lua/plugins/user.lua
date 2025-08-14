@@ -101,21 +101,19 @@ return {
     "ojroques/nvim-osc52",
     event = "VeryLazy",
     config = function()
-      require('osc52').setup {
-        max_length = 0,      -- 무제한
-        silent = false,      -- 복사 알림 표시
-        trim = false,        -- 공백 유지
+      require("osc52").setup {
+        max_length = 0, -- 무제한
+        silent = false, -- 복사 알림 표시
+        trim = false, -- 공백 유지
         tmux_passthrough = true, -- tmux 지원
       }
-      
+
       -- SSH/Docker 환경에서 yank 시 자동 OSC 52 복사
-      if vim.env.SSH_CLIENT or vim.env.SSH_TTY or os.getenv("container") then
-        vim.api.nvim_create_autocmd('TextYankPost', {
+      if vim.env.SSH_CLIENT or vim.env.SSH_TTY or os.getenv "container" then
+        vim.api.nvim_create_autocmd("TextYankPost", {
           callback = function()
-            if vim.v.event.operator == 'y' and vim.v.event.regname == '' then
-              require('osc52').copy_register('')
-            end
-          end
+            if vim.v.event.operator == "y" and vim.v.event.regname == "" then require("osc52").copy_register "" end
+          end,
         })
       end
     end,
@@ -373,7 +371,7 @@ return {
       require("claude-code").setup {
         -- Terminal window settings
         window = {
-          split_ratio = 0.50, -- Percentage of screen for the terminal window (height for horizontal, width for vertical splits)
+          split_ratio = 0.70, -- Percentage of screen for the terminal window (height for horizontal, width for vertical splits)
           position = "vertical", -- Position of the window: "botright", "topleft", "vertical", "float", etc.
           enter_insert = true, -- Whether to enter insert mode when opening Claude Code
           hide_numbers = true, -- Hide line numbers in the terminal window

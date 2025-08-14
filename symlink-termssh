@@ -1,1 +1,2 @@
 ln -s ~/.config/nvim/wezterm.lua ~/.wezterm.lua
+ln -s ~/.config/nvim/ghostty/ ~/.config
