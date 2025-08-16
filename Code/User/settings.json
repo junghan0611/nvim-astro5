@@ -4,7 +4,8 @@
     "34.69.73.65": "linux",
     "115.145.170.218": "linux",
     "192.168.0.9": "linux",
-    "nix": "linux"
+    "nix": "linux",
+    "hejdev1": "linux"
   },
   "glassit-linux.opacity": 95,
   "editor.renderControlCharacters": true,
@@ -246,7 +247,7 @@
   "eslint.format.enable": true,
   "calva.fmt.newIndentEngine": false,
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "prettier.configPath": "/usr/local/bin/prettier",
   "editor.tabCompletion": "on",
@@ -2128,8 +2129,8 @@
   ],
   "workbench.iconTheme": "vs-minimal",
   "explorer.confirmDelete": false,
-  "workbench.colorTheme": "Modus Operandi",
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.colorTheme": "Modus Operandi Tinted",
+  "workbench.secondarySideBar.defaultVisibility": "visible",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   }
