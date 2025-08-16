@@ -1,0 +1,3 @@
+ln -s ~/.config/nvim/Code/User/settings.json ~/.config/Code/User
+ln -s ~/.config/nvim/Code/User/keybindings.json ~/.config/Code/User
+ln -s ~/.config/nvim/Code/User/custom-style.css ~/.config/Code/User

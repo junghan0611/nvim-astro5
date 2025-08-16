@@ -1,0 +1,2137 @@
+{
+  "remote.SSH.remoteServerListenOnSocket": true,
+  "remote.SSH.remotePlatform": {
+    "34.69.73.65": "linux",
+    "115.145.170.218": "linux",
+    "192.168.0.9": "linux",
+    "nix": "linux"
+  },
+  "glassit-linux.opacity": 95,
+  "editor.renderControlCharacters": true,
+  "workbench.editor.enablePreview": false,
+  // "vscode_custom_css.imports": [
+  //   "file:///home/junghan/.config/Code/User/custom-style.css"
+  // ],
+  "editor.fontFamily": "\"Monoplex Nerd\", \"D2Coding ligature\", monospace",
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.defaultDateFormat": null,
+  "java.test.editor.enableShortcuts": true,
+  "java.jdt.ls.java.home": "/usr/",
+  "netbeans.verbose": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "editor.rulers": [
+    100
+  ],
+  "C_Cpp.updateChannel": "Insiders",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.editor.labelFormat": "short",
+  "search.showLineNumbers": true,
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook",
+    "*.doc": "default"
+  },
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "editor.wordWrap": "on",
+  "editor.accessibilitySupport": "off",
+  "security.workspace.trust.untrustedFiles": "open",
+  "sourcegraph.accessToken": "cbead09bba368f25522e45d528671543a49c148d",
+  "vscode-edge-devtools.mirrorEdits": true,
+  "vscode-edge-devtools.webhint": false,
+  "cmake.configureOnOpen": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "redhat.telemetry.enabled": true,
+  "calva.prettyPrintingOptions": {
+    "printEngine": "pprint",
+    "enabled": true,
+    "width": 120,
+    "maxLength": 50
+  },
+  "commentAnchors.showCursor": true,
+  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,dist,vendor,.lsp,.clj-kondo,.calva}/**/*",
+  "commentAnchors.workspace.pathFormat": "abbreviated",
+  "commentAnchors.tags.displayInSidebar": false,
+  "commentAnchors.tags.list": [
+    {
+      "tag": "ANCHOR",
+      "iconColor": "default",
+      "highlightColor": "#A8C023",
+      "scope": "file"
+    },
+    {
+      "tag": "TODO",
+      "iconColor": "blue",
+      "highlightColor": "#3ea8ff",
+      "scope": "workspace"
+    },
+    {
+      "tag": "TOFIX",
+      "iconColor": "red",
+      "highlightColor": "#F44336",
+      "scope": "workspace"
+    },
+    {
+      "tag": "STUB",
+      "iconColor": "purple",
+      "highlightColor": "#BA68C8",
+      "scope": "file"
+    },
+    {
+      "tag": "NOTE",
+      "iconColor": "orange",
+      "highlightColor": "#FFB300",
+      "scope": "file"
+    },
+    {
+      "tag": "REVIEW",
+      "iconColor": "green",
+      "highlightColor": "#64DD17",
+      "scope": "workspace"
+    },
+    {
+      "tag": "SECTION",
+      "iconColor": "blurple",
+      "highlightColor": "#896afc",
+      "scope": "workspace",
+      "behavior": "region",
+      "styleComment": true
+    },
+    {
+      "tag": "SUBJECT",
+      "iconColor": "#e3ff33",
+      "highlightColor": "#e3ff33",
+      "scope": "workspace",
+      "styleComment": true
+    },
+    {
+      "tag": "TIL",
+      "iconColor": "#FF33E2",
+      "highlightColor": "#FF33E2",
+      "scope": "workspace"
+    },
+    {
+      "tag": "JUNGHAN",
+      "iconColor": "#33E2FF",
+      "highlightColor": "#33E2FF",
+      "scope": "workspace",
+      "styleComment": true
+    },
+    {
+      "tag": "LINK",
+      "iconColor": "#2ecc71",
+      "highlightColor": "#2ecc71",
+      "scope": "workspace",
+      "behavior": "link"
+    }
+  ],
+  "commentAnchors.scrollPosition": "center",
+  "commentAnchors.workspace.maxFiles": 150,
+  "commentAnchors.parseDelay": 300,
+  "latex-workshop.latex.external.build.command": "make all",
+  "latex-workshop.latex.clean.command": "latexmk -CA",
+  "calva.evaluationSendCodeToOutputWindow": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "calva.paredit.defaultKeyMap": "strict",
+  "files.eol": "\n",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "workbench.startupEditor": "none",
+  "java.settings.url": "",
+  // https://github.com/VSpaceCode/VSpaceCode/blob/master/src/configuration/settings.jsonc
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "window.zoomLevel": 1,
+  "xml.format.maxLineWidth": 80,
+  "git.openRepositoryInParentFolders": "never",
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "keep",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "none",
+  // Org Agenda Preview
+  "org-agenda.agendaFiles": [
+    "/home/junghan/org/20230202T020200--inbox-now__aprj.org"
+  ],
+  "org.todoKeywords": [
+    "TODO",
+    "NEXT",
+    "DONE",
+    "DONT"
+  ],
+  "rss.accounts": {
+    "67a22830-2763-11ee-be84-bb2915da9858": {
+      "name": "Default",
+      "type": "local",
+      "feeds": []
+    }
+  },
+  /********** Project Manager **********/
+  "projectManager.groupList": true,
+  "projectManager.git.baseFolders": [
+    "~/sync/code/"
+    // "~/sync/code/"
+  ],
+  "projectManager.git.maxDepthRecursion": 2,
+  "editor.minimap.enabled": false,
+  "[clojure]": {
+    "editor.defaultFormatter": "betterthantomorrow.calva"
+  },
+  "calva.clojureLspPath": "/usr/local/bin/clojure-lsp",
+  "eslint.format.enable": true,
+  "calva.fmt.newIndentEngine": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.configPath": "/usr/local/bin/prettier",
+  "editor.tabCompletion": "on",
+  "editor.guides.bracketPairs": "active",
+  "workbench.settings.applyToAllProfiles": [
+    "editor.fontFamily"
+  ],
+  "vsicons.dontShowNewVersionMessage": true,
+  "github.copilot.enable": {
+    "quarto": false,
+    "*": false,
+    "python": true,
+    "plaintext": true,
+    "markdown": true,
+    "org": true,
+    "cpp": true
+  },
+  /********** Copilot / Chat **********/
+  "github.copilot.preferredAccount": "junghan0611",
+  "github.copilot.chat.localeOverride": "ko",
+  // "github.copilot.editor.enableCodeActions": false,
+  // "github.copilot.editor.enableAutoCompletions": true,
+  // "github.copilot.chat.search.semanticTextResults": true,
+  // "github.copilot.chat.experimental.temporalContext.enabled": true,
+  // "github.copilot.chat.experimental.inlineChatHint.enabled": true,
+  // "github.copilot.chat.experimental.inlineChatCompletionTrigger.enabled": true,
+  "vale.doNotShowWarningForFileToBeSavedBeforeLinting": true,
+  "editor.renderWhitespace": "trailing",
+  // "whichkey.delay": 1,
+  "whichkey.sortOrder": "alphabetically",
+  "whichkey.transient": {
+    "error": {
+      "title": "Error transient",
+      "bindings": [
+        {
+          "key": "N",
+          "name": "Previous error",
+          "command": "editor.action.marker.prev"
+        },
+        {
+          "key": "n",
+          "name": "Next error",
+          "command": "editor.action.marker.next"
+        },
+        {
+          "key": "p",
+          "name": "Previous error",
+          "command": "editor.action.marker.prev"
+        }
+      ]
+    },
+    "symbol": {
+      "title": "Highlight symbol transient",
+      "bindings": [
+        {
+          "key": "p",
+          "name": "Previous occurrence",
+          "command": "editor.action.wordHighlight.prev"
+        },
+        {
+          "key": "N",
+          "name": "Previous occurrence",
+          "command": "editor.action.wordHighlight.prev"
+        },
+        {
+          "key": "n",
+          "name": "Next occurrence",
+          "command": "editor.action.wordHighlight.next"
+        },
+        {
+          "key": "/",
+          "name": "Search in a project with a selection",
+          "commands": [
+            "editor.action.addSelectionToNextFindMatch",
+            "workbench.action.findInFiles"
+          ]
+        }
+      ]
+    },
+    "lineMoving": {
+      "title": "Line moving transient",
+      "bindings": [
+        {
+          "key": "J",
+          "name": "Move lines down",
+          "command": "editor.action.moveLinesDownAction"
+        },
+        {
+          "key": "K",
+          "name": "Move lines up",
+          "command": "editor.action.moveLinesUpAction"
+        }
+      ]
+    },
+    "frameZooming": {
+      "title": "Frame zooming transient",
+      "bindings": [
+        {
+          "key": "=",
+          "name": "Zoom in",
+          "command": "workbench.action.zoomIn"
+        },
+        {
+          "key": "+",
+          "name": "Zoom in",
+          "command": "workbench.action.zoomIn"
+        },
+        {
+          "key": "-",
+          "name": "Zoom out",
+          "command": "workbench.action.zoomOut"
+        },
+        {
+          "key": "0",
+          "name": "Reset zoom",
+          "command": "workbench.action.zoomReset"
+        }
+      ]
+    },
+    "fontZooming": {
+      "title": "Front zooming transient",
+      "bindings": [
+        {
+          "key": "=",
+          "name": "Zoom in",
+          "command": "editor.action.fontZoomIn"
+        },
+        {
+          "key": "+",
+          "name": "Zoom in",
+          "command": "editor.action.fontZoomIn"
+        },
+        {
+          "key": "-",
+          "name": "Zoom out",
+          "command": "editor.action.fontZoomOut"
+        },
+        {
+          "key": "0",
+          "name": "Reset zoom",
+          "command": "editor.action.fontZoomReset"
+        }
+      ]
+    },
+    "imageZooming": {
+      "title": "Image zooming transient",
+      "bindings": [
+        {
+          "key": "=",
+          "name": "Zoom in",
+          "command": "imagePreview.zoomIn"
+        },
+        {
+          "key": "+",
+          "name": "Zoom in",
+          "command": "imagePreview.zoomIn"
+        },
+        {
+          "key": "-",
+          "name": "Zoom out",
+          "command": "imagePreview.zoomOut"
+        }
+      ]
+    },
+    "smartExpand": {
+      "title": "Smart expand transient",
+      "bindings": [
+        {
+          "key": "v",
+          "name": "Grow selection",
+          "command": "editor.action.smartSelect.grow"
+        },
+        {
+          "key": "V",
+          "name": "Shrink selection",
+          "command": "editor.action.smartSelect.shrink"
+        }
+      ]
+    }
+  },
+  /********** Custom VSpaceCode bindings **********/
+  "vspacecode.bindingOverrides": [
+    {
+      "keys": "g.a",
+      "name": "Apply",
+      "icon": "gather",
+      "type": "command",
+      "command": "magit.apply-at-point"
+    },
+    {
+      "keys": "g.A",
+      "name": "+Cherry-pick",
+      "icon": "gather",
+      "type": "command",
+      "command": "magit.cherry-picking"
+    },
+    {
+      "keys": "g.b",
+      "name": "+Branch",
+      "icon": "git-branch",
+      "type": "command",
+      "command": "magit.branching"
+    },
+    {
+      "keys": "g.c",
+      "name": "+Commit",
+      "icon": "git-commit",
+      "type": "command",
+      "command": "magit.commit"
+    },
+    {
+      "keys": "g.d",
+      "name": "+Diff",
+      "icon": "diff",
+      "type": "command",
+      "command": "magit.diffing"
+    },
+    {
+      "keys": "g.f",
+      "name": "+Fetch",
+      "icon": "repo-sync",
+      "type": "command",
+      "command": "magit.fetching"
+    },
+    {
+      "keys": "g.F",
+      "name": "+Pull",
+      "icon": "repo-pull",
+      "type": "command",
+      "command": "magit.fetching"
+    },
+    {
+      "keys": "g.I",
+      "name": "+Ignore",
+      "icon": "diff-ignored",
+      "type": "command",
+      "command": "magit.ignoring"
+    },
+    {
+      "keys": "g.l",
+      "name": "+Log",
+      "icon": "list-flat",
+      "type": "command",
+      "command": "magit.logging"
+    },
+    {
+      "keys": "g.m",
+      "name": "+Merge",
+      "icon": "git-merge",
+      "type": "command",
+      "command": "magit.merging"
+    },
+    {
+      "keys": "g.M",
+      "name": "+Remote",
+      "icon": "cloud",
+      "type": "command",
+      "command": "magit.remoting"
+    },
+    {
+      "keys": "g.P",
+      "name": "+Push",
+      "icon": "repo-push",
+      "type": "command",
+      "command": "magit.pushing"
+    },
+    {
+      "keys": "g.r",
+      "name": "+Rebase",
+      "icon": "repo-forked",
+      "type": "command",
+      "command": "magit.rebasing"
+    },
+    {
+      "keys": "g.s",
+      //"name": "Stage",
+      "name": "Stage File",
+      "icon": "file-add",
+      "type": "command",
+      //"command": "magit.stage",
+      "command": "magit.stage-file"
+    },
+    {
+      "keys": "g.S",
+      "name": "Stage All",
+      "icon": "expand-all",
+      "type": "command",
+      "command": "magit.stage-all"
+    },
+    {
+      "keys": "g.t",
+      "name": "+Tag",
+      "icon": "tag",
+      "type": "command",
+      "command": "magit.tagging"
+    },
+    {
+      "keys": "g.u",
+      //"name": "Unstage",
+      "name": "Unstage File",
+      "icon": "file",
+      "type": "command",
+      //"command": "magit.unstage",
+      "command": "magit.unstage-file"
+    },
+    {
+      "keys": "g.U",
+      "name": "Unstage All",
+      "icon": "collapse-all",
+      "type": "command",
+      "command": "magit.unstage-all"
+    },
+    {
+      "keys": "g._",
+      "name": "+Revert",
+      "icon": "discard",
+      "type": "command",
+      "command": "magit.reverting"
+    },
+    {
+      "keys": "g.O",
+      "name": "+Reset",
+      "icon": "trash",
+      "type": "command",
+      "command": "magit.resetting"
+    },
+    //{
+    //    "keys": "g.x",
+    //    "name": "Discard",
+    //    "icon": "discard",
+    //    "type": "command",
+    //    "command": "magit.discard-at-point",
+    //},
+    {
+      "keys": "g.y",
+      "name": "+Show Refs",
+      "icon": "clippy",
+      "type": "command",
+      "command": "vspacecode.showMagitRefMenu"
+    },
+    {
+      "keys": "g.z",
+      "name": "+Stash",
+      "icon": "archive",
+      "type": "command",
+      "command": "magit.stashing"
+    },
+    {
+      "keys": "g.!",
+      "name": "+Run",
+      "icon": "rocket",
+      "type": "command",
+      "command": "magit.running"
+    },
+    {
+      "keys": "g.%",
+      "name": "+Worktree",
+      "icon": "list-tree",
+      "type": "command",
+      "command": "magit.worktree"
+    },
+    {
+      "keys": "g.o",
+      "name": "+Submodules",
+      "icon": "file-submodule",
+      "type": "command",
+      "command": "magit.submodules"
+    },
+    {
+      "keys": "g.$",
+      "name": "Process Log",
+      "icon": "output",
+      "type": "command",
+      "command": "magit.process-log"
+    },
+    {
+      "keys": "g.B",
+      "name": "+Blame",
+      "icon": "organization",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "B",
+          "name": "Blame file with GitLens",
+          "type": "command",
+          "icon": "file",
+          "command": "gitlens.toggleFileBlame"
+        },
+        {
+          "key": "b",
+          "name": "Blame file with magit",
+          "type": "command",
+          "icon": "file",
+          "command": "magit.blame-file"
+        },
+        {
+          "key": "p",
+          "name": "Blame previous change",
+          "type": "command",
+          "icon": "clock",
+          "command": "gitlens.openBlamePriorToChange"
+        },
+        {
+          "key": "s",
+          "name": "Show commit details",
+          "type": "command",
+          "icon": "eye",
+          "command": "gitlens.showQuickCommitDetails"
+        }
+      ]
+    },
+    {
+      "keys": "g.L",
+      "name": "View log graph",
+      "type": "command",
+      "icon": "git-commit",
+      "command": "git-graph.view"
+    },
+    {
+      "keys": "g.g",
+      "name": "Magit status",
+      "type": "command",
+      "command": "magit.status",
+      "icon": "rocket"
+    },
+    {
+      "keys": "g.G",
+      "name": "GitLens Commands",
+      "type": "command",
+      "command": "gitlens.gitCommands",
+      "icon": "rocket"
+    },
+    {
+      "keys": "g.h",
+      "name": "+GitHub",
+      "icon": "github",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "a",
+          "name": "Open GitHub Actions",
+          "icon": "github-action",
+          "type": "command",
+          "command": "workbench.view.extension.github-actions"
+        },
+        {
+          "key": "o",
+          "name": "Open permalink on GitHub",
+          "icon": "globe",
+          "type": "command",
+          "command": "issue.openGithubPermalink"
+        },
+        {
+          "key": "O",
+          "name": "Open remote repository",
+          "icon": "remote",
+          "type": "command",
+          "command": "remoteHub.openRepository"
+        },
+        {
+          "key": "y",
+          "name": "Copy GitHub permalink",
+          "icon": "link",
+          "type": "command",
+          "command": "issue.copyGithubPermalink"
+        },
+        {
+          "key": "Y",
+          "name": "Copy GitHub permalink as Markdown",
+          "icon": "markdown",
+          "type": "command",
+          "command": "issue.copyMarkdownGithubPermalink"
+        },
+        {
+          "key": "p",
+          "name": "+PRs",
+          "icon": "git-pull-request",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "p",
+              "name": "Show pull requests",
+              "icon": "eye",
+              "type": "command",
+              "command": "pr:github.focus"
+            },
+            {
+              "key": "c",
+              "name": "Create pull request",
+              "icon": "git-pull-request-create",
+              "type": "command",
+              "command": "pr.create"
+            }
+          ]
+        },
+        {
+          "key": "i",
+          "name": "+Issues",
+          "icon": "issues",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "i",
+              "name": "Show issues",
+              "icon": "eye",
+              "type": "command",
+              "command": "issues:github.focus"
+            },
+            {
+              "key": "c",
+              "name": "Create issue",
+              "icon": "issues",
+              "type": "command",
+              "command": "issue.createIssue"
+            },
+            {
+              "key": "s",
+              "name": "Create issue from selection",
+              "icon": "selection",
+              "type": "command",
+              "command": "issue.createIssueFromSelection"
+            },
+            {
+              "key": "S",
+              "name": "Create issue from clipboard",
+              "icon": "clippy",
+              "type": "command",
+              "command": "issue.createIssueFromClipboard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "keys": "d.\t",
+      "name": "Diff editor: switch side",
+      "icon": "arrow-swap",
+      "type": "command",
+      "command": "diffEditor.switchSide"
+    },
+    {
+      "keys": "D.p",
+      "name": "+partial",
+      "icon": "list-selection",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "s",
+          "name": "Select text for compare",
+          "icon": "list-selection",
+          "type": "command",
+          "command": "extension.partialDiff.markSection1"
+        },
+        {
+          "key": "d",
+          "name": "Compare Text with Previous Selection",
+          "icon": "diff",
+          "type": "command",
+          "command": "extension.partialDiff.markSection2AndTakeDiff"
+        },
+        {
+          "key": "c",
+          "name": "Compare Text with Clipboard",
+          "icon": "clippy",
+          "type": "command",
+          "command": "extension.partialDiff.diffSelectionWithClipboard"
+        },
+        {
+          "key": "e",
+          "name": "Compare Text in Visible Editors",
+          "icon": "diff-multiple",
+          "type": "command",
+          "command": "extension.partialDiff.diffVisibleEditors"
+        }
+      ]
+    },
+    {
+      "keys": "g.H",
+      "name": "+GitLab",
+      "icon": "github-alt", // close enough...
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "/",
+          "name": "GitLab project search",
+          "icon": "search",
+          "type": "command",
+          "command": "gl.projectAdvancedSearch"
+        },
+        {
+          "key": "a",
+          "name": "GitLab Pipeline Actions",
+          "icon": "github-action",
+          "type": "command",
+          "command": "gl.pipelineActions"
+        },
+        {
+          "key": "A",
+          "name": "Validate GitLab CI config",
+          "icon": "check",
+          "type": "command",
+          "command": "gl.validateCIConfig"
+        },
+        {
+          "key": "d",
+          "name": "GitLab compare current branch with master",
+          "icon": "diff",
+          "type": "command",
+          "command": "gl.compareCurrentBranch"
+        },
+        {
+          "key": "o",
+          "name": "Open permalink on GitLab",
+          "icon": "globe",
+          "type": "command",
+          "command": "gl.openActiveFile"
+        },
+        {
+          "key": "O",
+          "name": "Open remote repository",
+          "icon": "remote",
+          "type": "command",
+          "command": "gl.openRepository"
+        },
+        {
+          "key": "y",
+          "name": "Copy GitLab permalink",
+          "icon": "link",
+          "type": "command",
+          "command": "gl.copyLinkToActiveFile"
+        },
+        {
+          "key": "p",
+          "name": "+MRs",
+          "icon": "git-pull-request",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "p",
+              "name": "Show merge requests",
+              "icon": "eye",
+              "type": "command",
+              "command": "issuesAndMrs.focus"
+            },
+            {
+              "key": "P",
+              "name": "Show merge requests assigned to me",
+              "icon": "person",
+              "type": "command",
+              "command": "gl.showMergeRequestsAssignedToMe"
+            },
+            {
+              "key": "/",
+              "name": "Search project MRs",
+              "icon": "search",
+              "type": "command",
+              "command": "gl.mergeRequestSearch"
+            },
+            {
+              "key": "c",
+              "name": "Create merge request from current branch",
+              "icon": "git-branch",
+              "type": "command",
+              "command": "gl.openCurrentMergeRequest"
+            },
+            {
+              "key": "C",
+              "name": "Create merge request",
+              "icon": "git-pull-request-create",
+              "type": "command",
+              "command": "gl.openCreateNewMR"
+            }
+          ]
+        },
+        {
+          "key": "s",
+          "name": "+Snippets",
+          "icon": "symbol-snippet",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "c",
+              "name": "Create snippet",
+              "icon": "add",
+              "type": "command",
+              "command": "gl.createSnippet"
+            },
+            {
+              "key": "i",
+              "name": "Insert snippet",
+              "icon": "pencil",
+              "type": "command",
+              "command": "gl.insertSnippet"
+            }
+          ]
+        },
+        {
+          "key": "i",
+          "name": "+Issues",
+          "icon": "issues",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "i",
+              "name": "Show issues",
+              "icon": "eye",
+              "type": "command",
+              "command": "issuesAndMrs.focus"
+            },
+            {
+              "key": "I",
+              "name": "Show issues assigned to me",
+              "icon": "person",
+              "type": "command",
+              "command": "gl.showIssuesAssignedToMe"
+            },
+            {
+              "key": "/",
+              "name": "Search project issues",
+              "icon": "search",
+              "type": "command",
+              "command": "gl.issueSearch"
+            },
+            {
+              "key": "c",
+              "name": "Create issue",
+              "icon": "issues",
+              "type": "command",
+              "command": "gl.openCreateNewIssue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "keys": "h.z",
+      "name": "Zeal for current text",
+      "icon": "library",
+      "type": "command",
+      "command": "extension.dash.specific"
+    },
+    {
+      "keys": "h.Z",
+      "name": "Open Zeal",
+      "type": "command",
+      "icon": "library",
+      "command": "extension.dash.emptySyntax"
+    },
+    {
+      "keys": "f.y.i",
+      "name": "Yank image (CodeSnap)",
+      //"icon": "device-camera",
+      "type": "command",
+      "command": "codesnap.start"
+    },
+    // better project menu
+    {
+      "keys": "p.o",
+      "name": "Open folder",
+      "icon": "folder-opened",
+      "type": "command",
+      "command": "workbench.action.files.openFolder"
+    },
+    {
+      "keys": "p.p",
+      "name": "Open project",
+      "icon": "project",
+      "type": "command",
+      "command": "projectManager.listProjects"
+    },
+    {
+      "keys": "p.P",
+      "name": "Open project in new window",
+      "icon": "empty-window",
+      "type": "command",
+      "command": "projectManager.listProjectsNewWindow"
+    },
+    {
+      "keys": "p.m",
+      "name": "+Project manager",
+      "icon": "gear",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "r",
+          "name": "Refresh projects",
+          "icon": "refresh",
+          "type": "command",
+          "command": "projectManager.refreshProjects"
+        },
+        {
+          "key": "e",
+          "name": "Edit projects",
+          "icon": "edit",
+          "type": "command",
+          "command": "projectManager.editProjects"
+        },
+        {
+          "key": "s",
+          "name": "Save project",
+          "icon": "save",
+          "type": "command",
+          "command": "projectManager.saveProject"
+        },
+        {
+          "key": "v",
+          "name": "View sidebar",
+          "icon": "eye",
+          "type": "command",
+          "command": "workbench.view.extension.project-manager"
+        }
+      ]
+    },
+    {
+      "keys": "p.s",
+      "name": "Open SSH remote project",
+      "icon": "remote-explorer",
+      "type": "command",
+      "command": "opensshremotes.openEmptyWindow"
+    },
+    // swap JSON/GUI settings
+    {
+      "keys": "f.e.D",
+      "name": "Open settings",
+      "icon": "settings-gear",
+      "type": "command",
+      "command": "workbench.action.openGlobalSettings"
+    },
+    {
+      "keys": "f.e.K",
+      "name": "Open global key bindings",
+      "icon": "keyboard",
+      "type": "command",
+      "command": "workbench.action.openGlobalKeybindings"
+    },
+    {
+      "keys": "f.e.W",
+      "name": "Open workspace settings",
+      "icon": "settings-edit",
+      "type": "command",
+      "command": "workbench.action.openWorkspaceSettings"
+    },
+    {
+      "keys": "f.e.d",
+      "name": "Open settings JSON",
+      "icon": "json",
+      "type": "command",
+      "command": "workbench.action.openSettingsJson"
+    },
+    {
+      "keys": "f.e.k",
+      "name": "Open global key bindings JSON",
+      "icon": "json",
+      "type": "command",
+      "command": "workbench.action.openGlobalKeybindingsFile"
+    },
+    {
+      "keys": "f.e.w",
+      "name": "Open workspace settings JSON",
+      "icon": "json",
+      "type": "command",
+      "command": "workbench.action.openWorkspaceSettingsFile"
+    },
+    // Add extension binding
+    {
+      "keys": "f.e.e",
+      "name": "Show extensions",
+      "icon": "extensions",
+      "type": "command",
+      "command": "workbench.view.extensions"
+    },
+    {
+      "keys": "f.e.E",
+      "name": "Install extension from VSIX",
+      "icon": "package",
+      "type": "command",
+      "command": "workbench.extensions.action.installVSIX"
+    },
+    // Developer bindings
+    // based on https://github.com/VSpaceCode/community-configs/tree/master/macintacos
+    {
+      "keys": "f.e.v",
+      "name": "+Developer",
+      "icon": "bug",
+      "type": "bindings",
+      "bindings": [
+        {
+          "command": "workbench.action.toggleDevTools",
+          "key": "d",
+          "name": "Show developer tools",
+          "icon": "bug",
+          "type": "command"
+        },
+        {
+          "command": "workbench.action.setLogLevel",
+          "key": "l",
+          "name": "Set log level...",
+          "icon": "output",
+          "type": "command"
+        },
+        {
+          "command": "workbench.action.showLogs",
+          "key": "L",
+          "name": "Show logs...",
+          "icon": "eye",
+          "type": "command"
+        },
+        {
+          "command": "workbench.action.showRuntimeExtensions",
+          "key": "r",
+          "name": "Show running extensions",
+          "icon": "extensions",
+          "type": "command"
+        },
+        {
+          "command": "workbench.action.openProcessExplorer",
+          "key": "p",
+          "name": "Open Process Explorer",
+          "icon": "server-process",
+          "type": "command"
+        }
+      ]
+    },
+    // Duplicate file
+    {
+      "keys": [
+        "f",
+        "C"
+      ],
+      "name": "Duplicate (clone) file",
+      "icon": "files",
+      "type": "command",
+      "command": "duplicate.execute"
+    },
+    // Additional testing Python bindings
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "B"
+      ],
+      "name": "Debug current test file",
+      "icon": "file",
+      "type": "command",
+      "command": "testing.debugCurrentFile"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "R"
+      ],
+      "name": "Debug failed tests",
+      "icon": "x",
+      "type": "command",
+      "command": "testing.debugFailTests"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "c"
+      ],
+      "name": "Run test at cursor",
+      "icon": "whole-word",
+      "type": "command",
+      "command": "testing.runAtCursor"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "C"
+      ],
+      "name": "Debug test at cursor",
+      "icon": "whole-word",
+      "type": "command",
+      "command": "testing.debugAtCursor"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "."
+      ],
+      "name": "Rerun last run",
+      "icon": "refresh",
+      "type": "command",
+      "command": "testing.reRunLastRun"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        ","
+      ],
+      "name": "Debug last run",
+      "icon": "refresh",
+      "type": "command",
+      "command": "testing.debugLastRun"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "j"
+      ],
+      "name": "Go to next failure",
+      "icon": "arrow-down",
+      "type": "command",
+      "command": "testing.goToNextMessage"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "k"
+      ],
+      "name": "Go to previous failure",
+      "icon": "arrow-up",
+      "type": "command",
+      "command": "testing.goToPreviousMessage"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "p"
+      ],
+      "name": "Peek output",
+      "icon": "eye",
+      "type": "command",
+      "command": "testing.openOutputPeek"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "s"
+      ],
+      "name": "Set up tests",
+      "icon": "gear",
+      "type": "command",
+      "command": "python.configureTests"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "o"
+      ],
+      "name": "Show output",
+      "icon": "eye",
+      "type": "command",
+      "command": "testing.showMostRecentOutput"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "v"
+      ],
+      "name": "Show testing panel",
+      "icon": "eye",
+      "type": "command",
+      "command": "workbench.view.testing.focus"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "O"
+      ],
+      "name": "Toggle inline output",
+      "icon": "eye",
+      "type": "command",
+      "command": "testing.toggleInlineTestOutput"
+    },
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "t",
+        "x"
+      ],
+      "name": "Cancel run",
+      "icon": "x",
+      "type": "command",
+      "command": "testing.cancelRun"
+    },
+    // Python tests via test-explorer
+    // {
+    //     "keys": ["m", "languageId:python", "t", "a"],
+    //     "name": "Run all tests",
+    //     "icon": "beaker",
+    //     "type": "command",
+    //     "command": "test-explorer.run-all",
+    // },
+    // {
+    //     "keys": ["m", "languageId:python", "t", "b"],
+    //     "name": "Run current test file",
+    //     "icon": "file",
+    //     "type": "command",
+    //     "command": "test-explorer.run-file",
+    // },
+    // {
+    //     "keys": ["m", "languageId:python", "t", "r"],
+    //     "name": "Re-run tests",
+    //     "icon": "sync",
+    //     "type": "command",
+    //     "command": "test-explorer.rerun"
+    // },
+    // {
+    //     "keys": ["m", "languageId:python", "t", "R"],
+    //     "name": "Re-run tests in debugger",
+    //     "icon": "bug",
+    //     "type": "command",
+    //     "command": "test-explorer.redebug"
+    // },
+    // {
+    //     "keys": ["m", "languageId:python", "t", "t"],
+    //     "name": "Run test under cursor",
+    //     "icon": "whole-word",
+    //     "type": "command",
+    //     "command": "test-explorer.run-test-at-cursor"
+    // },
+    // {
+    //     "keys": ["m", "languageId:python", "t", "T"],
+    //     "name": "Debug test under cursor",
+    //     "icon": "bug",
+    //     "type": "command",
+    //     "command": "test-explorer.debug-test-at-cursor"
+    // },
+    // {
+    //     "keys": ["m", "languageId:python", "t", "c"],
+    //     "name": "Cancel running tests",
+    //     "icon": "close",
+    //     "type": "command",
+    //     "command": "test-explorer.cancel"
+    // },
+    // {
+    //     "keys": ["m", "languageId:python", "t", "C"],
+    //     "name": "Refresh tests",
+    //     "icon": "refresh",
+    //     "type": "command",
+    //     "command": "test-explorer.refresh",
+    // },
+    // {
+    //     "keys": ["m", "languageId:python", "t", "v"],
+    //     "name": "Focus test explorer view",
+    //     "icon": "eye",
+    //     "type": "command",
+    //     "command": "test-explorer.focus"
+    // },
+    // Tox integration
+    {
+      "keys": [
+        "m",
+        "languageId:python",
+        "c",
+        "t"
+      ],
+      "name": "+Tox",
+      "icon": "play",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "t",
+          "name": "Run tox",
+          "icon": "play",
+          "type": "command",
+          "command": "python-tox.select"
+        },
+        {
+          "key": "T",
+          "name": "Run tox with arguments",
+          "icon": "play-circle",
+          "type": "command",
+          "command": "python-tox.selectWithArgs"
+        },
+        {
+          "key": "m",
+          "name": "Run tox (multiple)",
+          "icon": "run-all",
+          "type": "command",
+          "command": "python-tox.selectMultiple"
+        },
+        {
+          "key": "M",
+          "name": "Run tox (multiple) with arguments",
+          "icon": "run-all",
+          "type": "command",
+          "command": "python-tox.selectMultipleWithArgs"
+        },
+        {
+          "key": "?",
+          "name": "Show tox documentation",
+          "icon": "book",
+          "type": "command",
+          "command": "python-tox.openDocs"
+        }
+      ]
+    },
+    // PlatformIO integration
+    {
+      "keys": [
+        "m",
+        "languageId:cpp",
+        "p"
+      ],
+      "name": "+PlatformIO",
+      "type": "bindings",
+      "icon": "bug",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Build",
+          "icon": "gear",
+          "type": "command",
+          "command": "platformio-ide.build"
+        },
+        {
+          "key": "u",
+          "name": "Upload",
+          "icon": "zap",
+          "type": "command",
+          "command": "platformio-ide.upload"
+        },
+        {
+          "key": "U",
+          "name": "Upload and monitor",
+          "icon": "squirrel",
+          "type": "command",
+          "command": "platformio-ide.uploadAndMonitor"
+        },
+        {
+          "key": "C",
+          "name": "Clean",
+          "icon": "trashcan",
+          "type": "command",
+          "command": "platformio-ide.clean"
+        },
+        {
+          "key": "m",
+          "name": "Monitor",
+          "icon": "terminal",
+          "type": "command",
+          "command": "platformio-ide.serialMonitor"
+        }
+      ]
+    },
+    // Arduino integration
+    {
+      "keys": [
+        "m",
+        "languageId:cpp",
+        "a"
+      ],
+      "name": "+Arduino",
+      "type": "bindings",
+      "icon": "circuit-board",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Verify",
+          "icon": "gear",
+          "type": "command",
+          "command": "arduino.verify"
+        },
+        {
+          "key": "u",
+          "name": "Upload",
+          "icon": "zap",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "u",
+              "name": "Upload",
+              "icon": "zap",
+              "type": "command",
+              "command": "arduino.upload"
+            },
+            {
+              "key": "U",
+              "name": "Upload Using Programmer",
+              "icon": "plug",
+              "type": "command",
+              "command": "arduino.uploadUsingProgrammer"
+            },
+            {
+              "key": "c",
+              "name": "CLI Upload",
+              "icon": "terminal",
+              "type": "command",
+              "command": "arduino.cliUpload"
+            },
+            {
+              "key": "C",
+              "name": "CLI Upload Using Programmer",
+              "icon": "plug",
+              "type": "command",
+              "command": "arduino.cliUploadUsingProgrammer"
+            }
+          ]
+        },
+        {
+          "key": "r",
+          "name": "Rebuild IntelliSense Configuration",
+          "icon": "refresh",
+          "type": "command",
+          "command": "arduino.rebuildIntelliSenseConfig"
+        },
+        {
+          "key": "b",
+          "name": "+Board",
+          "icon": "circuit-board",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "c",
+              "name": "Board config",
+              "icon": "gear",
+              "type": "command",
+              "command": "arduino.showBoardConfig"
+            },
+            {
+              "key": "m",
+              "name": "Board manager",
+              "icon": "tools",
+              "type": "command",
+              "command": "arduino.showBoardManager"
+            },
+            {
+              "key": "b",
+              "name": "Change board type",
+              "icon": "circuit-board",
+              "type": "command",
+              "command": "arduino.changeBoardType"
+            }
+          ]
+        },
+        {
+          "key": "p",
+          "name": "+Port",
+          "icon": "plug",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "b",
+              "name": "Change Baud Rate",
+              "icon": "pulse",
+              "type": "command",
+              "command": "arduino.changeBaudRate"
+            },
+            {
+              "key": "m",
+              "name": "Open Serial Monitor",
+              "icon": "eye",
+              "type": "command",
+              "command": "arduino.openSerialMonitor"
+            },
+            {
+              "key": "M",
+              "name": "Close Serial Monitor",
+              "icon": "eye-closed",
+              "type": "command",
+              "command": "arduino.closeSerialMonitor"
+            },
+            {
+              "key": "p",
+              "name": "Select Serial Port",
+              "icon": "plug",
+              "type": "command",
+              "command": "arduino.selectSerialPort"
+            },
+            {
+              "key": "P",
+              "name": "Select Programmer",
+              "icon": "zap",
+              "type": "command",
+              "command": "arduino.selectProgrammer"
+            },
+            {
+              "key": "t",
+              "name": "Send Text to Serial Port",
+              "icon": "symbol-text",
+              "type": "command",
+              "command": "arduino.sendMessageToSerialPort"
+            }
+          ]
+        },
+        {
+          "key": "e",
+          "name": "Show examples",
+          "icon": "file-code",
+          "type": "command",
+          "command": "arduino.showExamples"
+        },
+        {
+          "key": "E",
+          "name": "Show examples in explorer",
+          "icon": "list-tree",
+          "type": "command",
+          "command": "arduinoExampleExplorer.focus"
+        },
+        {
+          "key": "i",
+          "name": "Initialize",
+          "icon": "new-file",
+          "type": "command",
+          "command": "arduino.initialize"
+        },
+        {
+          "key": "l",
+          "name": "Library Manager",
+          "icon": "library",
+          "type": "command",
+          "command": "arduino.showLibraryManager"
+        },
+        {
+          "key": "s",
+          "name": "Select sketch",
+          "icon": "files",
+          "type": "command",
+          "command": "arduino.selectSketch"
+        }
+      ]
+    },
+    // Asciidoc mode
+    {
+      "keys": [
+        "m",
+        "languageId:asciidoc"
+      ],
+      "name": "Asciidoc",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "p",
+          "name": "Show preview",
+          "type": "command",
+          "command": "asciidoc.showPreviewToSide"
+        },
+        {
+          "key": "P",
+          "name": "Show preview in new tab",
+          "type": "command",
+          "command": "asciidoc.showPreview"
+        }
+      ]
+    },
+    // Monkey C mode
+    {
+      "keys": [
+        "m",
+        "languageId:monkeyc"
+      ],
+      "name": "Monkey C",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "m",
+          "name": "Manifest",
+          "type": "bindings",
+          "icon": "checklist",
+          "bindings": [
+            {
+              "key": "a",
+              "name": "Edit application",
+              "icon": "tools",
+              "type": "command",
+              "command": "monkeyc.editApplication"
+            },
+            {
+              "key": "A",
+              "name": "Edit annotations",
+              "icon": "ellipsis",
+              "type": "command",
+              "command": "monkeyc.editAnnotations"
+            },
+            {
+              "key": "d",
+              "name": "Edit products",
+              "icon": "watch",
+              "type": "command",
+              "command": "monkeyc.editProducts"
+            },
+            {
+              "key": "D",
+              "name": "Set Products by Version",
+              "icon": "star-empty",
+              "type": "command",
+              "command": "monkeyc.setProductsByProductCategory"
+            },
+            {
+              "key": "p",
+              "name": "Edit permissions",
+              "icon": "unlock",
+              "type": "command",
+              "command": "monkeyc.editPermissions"
+            },
+            {
+              "key": "l",
+              "name": "Edit languages",
+              "icon": "globe",
+              "type": "command",
+              "command": "monkeyc.editLanguages"
+            },
+            {
+              "key": "b",
+              "name": "Edit monkey barrel",
+              "icon": "library",
+              "type": "command",
+              "command": "monkeyc.configureBarrel"
+            },
+            {
+              "key": "u",
+              "name": "Regenerate UUID",
+              "icon": "refresh",
+              "type": "command",
+              "command": "monkeyc.regenerateUUID"
+            }
+          ]
+        },
+        {
+          "key": "s",
+          "name": "Setup / SDK",
+          "type": "bindings",
+          "icon": "archive",
+          "bindings": [
+            {
+              "key": "d",
+              "name": "Show docs",
+              "icon": "book",
+              "type": "command",
+              "command": "monkeyc.viewDocumentation"
+            },
+            {
+              "key": "v",
+              "name": "Verify installation",
+              "icon": "check",
+              "type": "command",
+              "command": "monkeyc.verifyInstallation"
+            },
+            {
+              "key": "s",
+              "name": "Show samples",
+              "icon": "book",
+              "type": "command",
+              "command": "monkeyc.samples"
+            },
+            {
+              "key": "k",
+              "name": "Generate developer key",
+              "icon": "key",
+              "type": "command",
+              "command": "monkeyc.generateDeveloperKey"
+            },
+            {
+              "key": "m",
+              "name": "Open SDK manager",
+              "icon": "package",
+              "type": "command",
+              "command": "monkeyc.openSdkManager"
+            }
+          ]
+        },
+        {
+          "key": "b",
+          "name": "Build",
+          "type": "bindings",
+          "icon": "gear",
+          "bindings": [
+            {
+              "key": "b",
+              "name": "Build current project",
+              "icon": "gear",
+              "type": "command",
+              "command": "monkeyc.buildCurrentProject"
+            },
+            {
+              "key": "d",
+              "name": "Build for device",
+              "icon": "watch",
+              "type": "command",
+              "command": "monkeyc.buildForDevice"
+            },
+            {
+              "key": "e",
+              "name": "Export project",
+              "icon": "export",
+              "type": "command",
+              "command": "monkeyc.exportProject"
+            },
+            {
+              "key": "o",
+              "name": "Optimized",
+              "type": "bindings",
+              "icon": "dashboard",
+              "bindings": [
+                {
+                  "key": "b",
+                  "name": "Build optimized project",
+                  "icon": "gear",
+                  "type": "command",
+                  "command": "prettiermonkeyc.buildOptimizedProject"
+                },
+                {
+                  "key": "r",
+                  "name": "Build and run optimized project",
+                  "icon": "play",
+                  "type": "command",
+                  "command": "prettiermonkeyc.runOptimizedProject"
+                },
+                {
+                  "key": "c",
+                  "name": "Clean optimized project",
+                  "icon": "trash",
+                  "type": "command",
+                  "command": "prettiermonkeyc.cleanOptimizedBuild"
+                },
+                {
+                  "key": "g",
+                  "name": "Generate optimized project",
+                  "icon": "files",
+                  "type": "command",
+                  "command": "prettiermonkeyc.generateOptimizedProject"
+                },
+                {
+                  "key": "e",
+                  "name": "Export optimized project",
+                  "icon": "export",
+                  "type": "command",
+                  "command": "prettiermonkeyc.exportOptimizedProject"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "t",
+          "name": "Run tests",
+          "icon": "beaker",
+          "type": "command",
+          "command": "monkeyc.runTests"
+        },
+        {
+          "key": "n",
+          "name": "New project",
+          "icon": "new-folder",
+          "type": "command",
+          "command": "monkeyc.newProject"
+        },
+        {
+          "key": "a",
+          "name": "SDK applications",
+          "type": "bindings",
+          "icon": "rocket",
+          "bindings": [
+            {
+              "key": "g",
+              "name": "Launch Monkey Graph",
+              "icon": "graph-line",
+              "type": "command",
+              "command": "monkeyc.launchMonkeyGraph"
+            },
+            {
+              "key": "m",
+              "name": "Launch Monkey Motion",
+              "icon": "squirrel",
+              "type": "command",
+              "command": "monkeyc.launchMonkeyMotion"
+            },
+            {
+              "key": "e",
+              "name": "Launch Error Reporting (ERA Viewer)",
+              "icon": "error",
+              "type": "command",
+              "command": "monkeyc.launchEraViewer"
+            }
+          ]
+        }
+      ]
+    },
+    // Live share bindings
+    {
+      "keys": "L",
+      "name": "+Live Share",
+      "icon": "live-share",
+      "type": "bindings",
+      "bindings": [
+        {
+          //"keys": ["f", "when:liveshare:hasCollaborators"],
+          "key": "f",
+          "name": "Follow participant",
+          "icon": "pin",
+          "type": "conditional",
+          "bindings": [
+            {
+              "key": "!liveshare.isFollowing",
+              "name": "default",
+              "icon": "pin",
+              "type": "command",
+              "command": "liveshare.follow"
+            },
+            {
+              "key": "liveshare.isFollowing",
+              "name": "Unfollow participant",
+              "icon": "pinned",
+              "type": "command",
+              "command": "liveshare.unfollow"
+            }
+          ]
+        },
+        {
+          //"keys": ["/", "when:liveshare:hasCollaborators"],
+          "key": "/",
+          "name": "Follow participant to the side",
+          "icon": "pin",
+          "type": "command",
+          "command": "liveshare.followToTheSide"
+        },
+        {
+          //"keys": ["!", "when:liveshare:hasCollaborators"],
+          "key": "!",
+          "name": "Focus participants",
+          "icon": "megaphone",
+          "type": "command",
+          "command": "liveshare.focusParticipants"
+        },
+        {
+          "key": "s",
+          "name": "Start session",
+          "icon": "live-share",
+          "type": "command",
+          "command": "liveshare.start"
+        },
+        {
+          //"keys": ["j", "when:liveshare.state != 'Joined' && liveshare.state != 'Shared'"],
+          "key": "j",
+          "name": "Join session",
+          "icon": "remote", // FIXME
+          "type": "command",
+          "command": "liveshare.join"
+        },
+        {
+          //"keys": ["i", "when:liveshare.state != 'Joined' && liveshare.state != 'Shared'"],
+          "key": "i",
+          "name": "Invite participant",
+          "icon": "mail", // FIXME
+          "type": "command",
+          "command": "liveshare.inviteAvailableContacts"
+        },
+        {
+          //"keys": ["i", "when:liveshare.state != 'Joined' && liveshare.state != 'Shared'"],
+          "key": "I",
+          "name": "Focus on contact view",
+          "icon": "person",
+          "type": "command",
+          "command": "liveshare.contacts.focus"
+        }
+      ]
+    },
+    // @ shortcut for symbols
+    {
+      "keys": "@",
+      "name": "Jump to symbol in buffer",
+      "icon": "symbol-class",
+      "type": "command",
+      "command": "workbench.action.gotoSymbol"
+    },
+    // toggle light/dark theme
+    {
+      "keys": [
+        "T",
+        "S"
+      ],
+      "name": "Toggle light/dark theme",
+      "icon": "color-mode",
+      "type": "command",
+      "command": "workbench.action.toggleLightDarkThemes"
+    },
+    // copilot
+    {
+      "keys": "a",
+      "name": "Co-Pilot Chat",
+      "type": "bindings",
+      "icon": "copilot",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Open New Chat",
+          "icon": "comment",
+          "command": "workbench.action.chat.newChat"
+        },
+        {
+          "key": "i",
+          "name": "Open inline chat",
+          "icon": "comment-discussion",
+          "command": "inlineChat.start"
+        },
+        {
+          "key": "I",
+          "name": "Inline...",
+          "icon": "comment-discussion",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "f",
+              "name": "Fix",
+              "icon": "check",
+              "command": "github.copilot.interactiveEditor.fix"
+            },
+            {
+              "key": "t",
+              "name": "Generate Test",
+              "icon": "beaker",
+              "command": "github.copilot.interactiveEditor.generateTests"
+            },
+            {
+              "key": "d",
+              "name": "Generate Docs",
+              "icon": "book",
+              "command": "github.copilot.interactiveEditor.generateDocs"
+            },
+            {
+              "key": "g",
+              "name": "Generate...",
+              "icon": "gear",
+              "command": "github.copilot.interactiveEditor.generate"
+            }
+          ]
+        },
+        {
+          "key": "q",
+          "name": "Open New Quick Chat",
+          "icon": "comment-draft",
+          "command": "workbench.action.openQuickChat"
+        }
+      ]
+    }
+  ],
+  "codeium.enableConfig": {
+    "*": false
+  },
+  "wolframLanguageNotebook.kernel.configurations": {
+    "wolframscript": {
+      "type": "local",
+      "command": "wolframscript",
+      "ports": "49152-65535"
+    }
+  },
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "terminal.integrated.inheritEnv": false,
+  "editor.fontSize": 15,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        ",",
+        "."
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "workbench.iconTheme": "vs-minimal",
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Modus Operandi",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
+  // "multiDiffEditor.experimental.enabled": true,
+}
