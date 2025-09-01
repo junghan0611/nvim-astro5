@@ -77,3 +77,10 @@ theme = catppuccin-mocha
 
 # Remove Ctrl+, keybinding to allow Neovim Claude Code plugin to use it
 keybind = ctrl+comma=unbind
+keybind = shift+enter=text:\x1b\r
+
+# 스크롤 키바인딩 추가 (Claude Code에서 사용 가능)
+keybind = ctrl+shift+k=scroll_page_lines:-3
+keybind = ctrl+shift+j=scroll_page_lines:3
+keybind = alt+u=scroll_page_up
+keybind = alt+v=scroll_page_down

@@ -1,0 +1,68 @@
+[colors.bright]
+black = "#000000"
+blue = "#79a8ff"
+cyan = "#4ae2f0"
+green = "#70b900"
+magenta = "#f78fe7"
+red = "#ff6b55"
+white = "#ffffff"
+yellow = "#fec43f"
+
+[colors.normal]
+black = "#000000"
+blue = "#2fafff"
+cyan = "#00d3d0"
+green = "#44bc44"
+magenta = "#feacd0"
+red = "#ff5f59"
+white = "#989898"
+yellow = "#d0bc00"
+
+[colors.primary]
+background = "#0D0E1C"
+foreground = "#989898"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 17.0
+
+[font.bold]
+family = "Monoplex Nerd"
+style = "Bold"
+
+[font.bold_italic]
+family = "Monoplex Nerd"
+style = "Bold Italic"
+
+[font.italic]
+family = "Monoplex Nerd"
+style = "Italic"
+
+[font.normal]
+family = "Monoplex Nerd"
+style = "Regular"
+
+[window]
+decorations = "none"
+decorations_theme_variant = "Dark"
+startup_mode = "Maximized"
+opacity = 0.90
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 4
+y = 4
+
+[mouse]
+hide_when_typing = false
+
+[keyboard]
+bindings = [
+  { key = "x", mods = "Control|Shift", action = "ToggleViMode" },
+  { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
