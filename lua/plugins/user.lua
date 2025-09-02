@@ -284,7 +284,7 @@ return {
         },
         i = {
           -- insert mode key bindings
-          ["<M-BS>"] = { "<C-w>", desc = "Delete word backward" },
+          -- ["<M-BS>"] = { "<C-w>", desc = "Delete word backward" }, -- Claude Code에서 문제 발생
         },
         t = {
           -- terminal mode key bindings
