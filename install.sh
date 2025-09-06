@@ -40,9 +40,9 @@ if [ "$PLATFORM" = "Termux" ]; then
     fi
     
     # Tree-sitter 확인 (Termux에서는 libtreesitter)
-    if ! pkg list-installed 2>/dev/null | grep -q libtreesitter; then
+    if ! pkg list-installed 2>/dev/null | grep -q tree-sitter; then
         echo "  Installing libtreesitter..."
-        pkg install libtreesitter -y
+        pkg install tree-sitter\* -y
     fi
     
     # Ripgrep 확인
