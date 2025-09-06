@@ -5,7 +5,9 @@
     "115.145.170.218": "linux",
     "192.168.0.9": "linux",
     "nix": "linux",
-    "hejdev1": "linux"
+    "hejdev1": "linux",
+    "noco": "linux",
+    "nocodb": "linux"
   },
   "glassit-linux.opacity": 95,
   "editor.renderControlCharacters": true,
@@ -257,11 +259,12 @@
   ],
   "vsicons.dontShowNewVersionMessage": true,
   "github.copilot.enable": {
-    "quarto": false,
     "*": false,
-    "python": true,
     "plaintext": true,
-    "markdown": true,
+    "markdown": false,
+    "scminput": false,
+    "quarto": false,
+    "python": true,
     "org": true,
     "cpp": true
   },
@@ -2129,10 +2132,20 @@
   ],
   "workbench.iconTheme": "vs-minimal",
   "explorer.confirmDelete": false,
-  "workbench.colorTheme": "Modus Operandi Tinted",
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
-  }
+  },
+  "kilo-code.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "kilo-code.deniedCommands": [],
+  "excalidraw.language": "ko-KR",
+  "workbench.colorTheme": "Dracula Theme"
   // "multiDiffEditor.experimental.enabled": true,
 }

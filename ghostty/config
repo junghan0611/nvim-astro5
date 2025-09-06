@@ -20,7 +20,7 @@
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
 font-family = Sarasa Term K Nerd Font
-font-size = 14.0
+font-size = 17.0
 
 # 폰트 width 조정
 # adjust-cell-width = -6%

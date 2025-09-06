@@ -292,5 +292,13 @@
         "key": "Ctrl+l",
         "command": "workbench.action.navigateRight",
         "when": "isInDiffEditor && !isInDiffLeftEditor"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\\\r\n"
+        },
+        "when": "terminalFocus"
     }
 ]
