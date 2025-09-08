@@ -34,7 +34,7 @@ return {
     "folke/which-key.nvim",
     opts = {
       ---@type false | "classic" | "modern" | "helix"
-      preset = "modern",
+      preset = "classic",
       sort = { "local", "order", "group", "alphanum", "mod" },
     },
   },
@@ -44,7 +44,7 @@ return {
     "AstroNvim/astroui",
     ---@type AstroUIOpts
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "astrodark", -- default AstroNvim theme
     },
   },
   -- show key presses in normal mode

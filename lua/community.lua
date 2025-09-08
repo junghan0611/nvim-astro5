@@ -26,7 +26,7 @@ return {
   -- Themes and Color
   --
   -- Colorscheme (Themes)
-  { import = "astrocommunity.colorscheme.catppuccin" },
+  -- { import = "astrocommunity.colorscheme.catppuccin" }, -- removed for minimal mode
 
   -- color picker and highlighter
   { import = "astrocommunity.color.ccc-nvim" },
