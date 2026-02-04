@@ -19,8 +19,23 @@
 # ==========================
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
-font-family = Sarasa Term K Nerd Font
-font-size = 17.0
+
+# Primary font: Sarasa Term K (한글 + 영문 + Nerd Font)
+font-family= "Sarasa Term K Nerd Font"
+# font-family = "Monoplex Nerd"
+# font-family = "GLG Nerd Font Mono"
+
+# Fallback font: Noto Emoji (이모지)
+font-family = "Noto Emoji"
+
+font-size = 14.0
+
+# term = xterm-ghostty
+term = xterm-256color
+
+# 2025-10-23 설정 추가
+clipboard-paste-protection = false
+copy-on-select = clipboard
 
 # 폰트 width 조정
 # adjust-cell-width = -6%
@@ -40,18 +55,19 @@ confirm-close-surface = false
 
 # 마우스 스크롤 멀티플라리어
 mouse-scroll-multiplier = 0.7
+mouse-hide-while-typing = false
 
 # 투명도 설정 : 95%
-background-opacity = 0.90
+background-opacity = 0.85
 
 # GTK titlebar 숨김
 # gtk-titlebar = false
-# gtk-single-instance = true
+gtk-single-instance = false
 
 # theme
 # check theme : ghostty +list-themes
-window-theme = dark
-theme = catppuccin-mocha
+# window-theme = dark
+# theme = catppuccin-mocha
 
 # window-padding-x = 2
 #
@@ -80,7 +96,27 @@ keybind = ctrl+comma=unbind
 keybind = shift+enter=text:\x1b\r
 
 # 스크롤 키바인딩 추가 (Claude Code에서 사용 가능)
-keybind = ctrl+shift+k=scroll_page_lines:-3
-keybind = ctrl+shift+j=scroll_page_lines:3
+# keybind = ctrl+shift+k=scroll_page_lines:-3
+# keybind = ctrl+shift+j=scroll_page_lines:3
 keybind = alt+u=scroll_page_up
 keybind = alt+v=scroll_page_down
+
+# 한글 키: Ghostty는 keybind에서 lang1 미지원
+# Ghostty가 기본으로 전송하는 시퀀스를 Emacs에서 매핑
+# xev: keysym 0xff31 (Hangul) = 65329
+# Ghostty + KKP는 자동으로 ESC[65329u 형식으로 전송 가능
+# keybind = hangul=text:\x1b\x1f\x50\x60\x1f
+# keybind = korean_hangul=text:\x1b\x1f\x50\x60\x1f
+# keybind = hangul_mode=text:\x1b\x1f\x50\x60\x1f
+# keybind = lang1=text:\x1b\x1f\x50\x60\x1f
+# keybind = 한=text:\x1b\x1f\x50\x60\x1f
+
+# 또는 F13-F25 같은 확장 펑션키
+keybind = f13=text:\x1b\x1f\x50\x60\x1f
+
+# 이맥스로 시퀀스 전달 확인
+# 이맥스에서 시퀀스를 받았는지 테스트:
+
+# ;; Emacs에서 시퀀스 확인
+# (global-set-key (kbd "\e\x1f\x50\x60\x1f")
+#                 (lambda () (interactive) (message "Hangul key received!")))

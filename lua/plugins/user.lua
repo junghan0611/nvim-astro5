@@ -500,4 +500,59 @@ return {
       }
     end,
   },
+
+  -- Orgmode support for Neovim (Termux minimal config)
+  {
+    "nvim-orgmode/orgmode",
+    event = "VeryLazy",
+    ft = { "org" },
+    config = function()
+      -- Basic orgmode setup for Termux
+      require("orgmode").setup {
+        org_agenda_files = "~/org/**/*",
+        org_default_notes_file = "~/org/notes.org",
+        org_todo_keywords = { "TODO", "PROGRESS", "|", "DONE", "CANCELLED" },
+        -- Minimal visual settings
+        org_startup_indented = false, -- No indentation for performance
+        org_adapt_indentation = false,
+        org_hide_leading_stars = false, -- Show all stars
+        org_hide_emphasis_markers = false, -- Show markup
+        org_ellipsis = "...", -- Simple ellipsis
+        org_log_done = "time",
+      }
+    end,
+  },
+
+  -- Telescope integration for orgmode
+  {
+    "nvim-orgmode/telescope-orgmode.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-orgmode/orgmode",
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function()
+      require("telescope").load_extension "orgmode"
+    end,
+  },
+
+  -- Simple Denote-style note taking (Emacs Denote for Neovim)
+  -- TODO: Find alternative or create the plugin
+  -- {
+  --   "junghanacs/simple-denote.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("simple-denote").setup {
+  --       dir = "~/org/denote/", -- Denote notes directory
+  --       ext = "org", -- Use org extension
+  --       add_heading = true, -- Add heading to new notes
+  --       retitle_heading = true, -- Update heading when retitling
+  --     }
+  --   end,
+  --   keys = {
+  --     { "<Leader>nd", "<cmd>Denote note<cr>", desc = "New Denote note" },
+  --     { "<Leader>nr", "<cmd>Denote retitle<cr>", desc = "Retitle note" },
+  --     { "<Leader>nk", "<cmd>Denote rekey<cr>", desc = "Change keywords" },
+  --   },
+  -- },
 }
