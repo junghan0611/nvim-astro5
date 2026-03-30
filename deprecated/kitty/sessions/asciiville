@@ -1,4 +1,0 @@
-new_tab Asciiville
-title Asciiville
-launch bash -c 'asciiville'
-layout tall

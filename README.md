@@ -1,114 +1,83 @@
-# Practicalli Astro5 Neovim Configuration
+# nvim-astro5
 
-```none
-██████╗ ██████╗  █████╗  ██████╗████████╗██╗ ██████╗ █████╗ ██╗     ██╗     ██╗
-██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██║██╔════╝██╔══██╗██║     ██║     ██║
-██████╔╝██████╔╝███████║██║        ██║   ██║██║     ███████║██║     ██║     ██║
-██╔═══╝ ██╔══██╗██╔══██║██║        ██║   ██║██║     ██╔══██║██║     ██║     ██║
-██║     ██║  ██║██║  ██║╚██████╗   ██║   ██║╚██████╗██║  ██║███████╗███████╗██║
-╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝
+AstroNvim v5 기반 텍스트 에디터 설정. LSP 없음, 개발도구 없음.
+Treesitter 하이라이팅 + Emacs 스타일 키바인딩으로 파일 읽고 편집하는 용도.
 
- █████╗ ███████╗████████╗██████╗  ██████╗     ███████╗
-██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔═══██╗    ██╔════╝
-███████║███████╗   ██║   ██████╔╝██║   ██║    ███████╗
-██╔══██║╚════██║   ██║   ██╔══██╗██║   ██║    ╚════██║
-██║  ██║███████║   ██║   ██║  ██║╚██████╔╝    ███████║
-╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝     ╚══════╝
+## 빠른 시작
+
+```bash
+git clone https://github.com/junghan0611/nvim-astro5
+cd nvim-astro5
+./run.sh --install   # 설정 복사 + 플러그인 설치 + ~/bin/nv 생성
+nv                   # 실행
 ```
 
-> NOTE: Ascii Art Generator: https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=Astro%205
+## 필요한 것
 
+- neovim 0.11+
+- git, ripgrep
+- C 컴파일러 (gcc/clang — Treesitter 파서 빌드용)
 
-## Overview
+```bash
+# Ubuntu/Debian
+sudo apt install neovim git ripgrep build-essential
 
-A lazy loading rich feature configuration for [Neovim 0.11.x](https://neovim.org/), providing common development tooling, including an effective Clojure REPL workflow.
+# macOS
+brew install neovim git ripgrep
 
-This configuration is built upon [AstroNvim version 5](https://github.com/AstroNvim/AstroNvim), extending the AstroNvim v5 template with valuable plugins, options and key mappings.
-
-[Practicalli Neovim](https://practical.li/neovim/) describes the Clojure REPL workflow, rich Git and GitHub clients and easy management of plugins and tools using this configuration.
-
-
-## 🛠️ Installation
-
-Recommended tools:
-
-- [Kitty Terminal](https://practical.li/engineering-playbook/command-line/kitty-terminal/)
-- [Neovim and supporting tools](https://practical.li/neovim/install/neovim/)
-- [Clojure CLI](https://practical.li/clojure/install/)
-
-Clone the Practicalli Astro5 repository (create a fork if customisation desired)
-
-```shell
-git clone git@github.com:practicalli/nvim-astro5 $HOME/.config/nvim
+# Termux
+pkg install neovim git ripgrep clang
 ```
 
-Run `nvim` command and wait for all plugins  to automatically install and Treesitter language parsers to compile.
+## 사용법
 
-```shell
-nvim
+```bash
+nv                    # 실행 (~/bin/nv 래퍼)
+nv file.md            # 파일 열기
+./run.sh --minimal    # 미니멀 모드 (Git UI 등 추가 비활성화)
 ```
 
-### Multiple Neovim configs
+## 핵심 키바인딩
 
-Clone to `$HOME/.config/nvim-astron5` and use the `NVIM_APPNAME=astronvim nvim` command to start Neovim with AstroNvim configuration
+### Leader (SPC) — Doom Emacs 스타일
 
-```shell
-git clone git@github.com:practicalli/nvim-astro5 $HOME/.config/nvim-astro5
-```
+| 키 | 동작 |
+|----|------|
+| `SPC f s` | 파일 저장 |
+| `SPC f r` | 최근 파일 |
+| `SPC b d` | 버퍼 닫기 |
+| `SPC <tab>` | 이전 버퍼 전환 |
+| `SPC E` | 파일 탐색기 |
+| `SPC /` | 프로젝트 검색 |
+| `SPC g f` | Git 상태 (neogit) |
+| `Tab` | 괄호 매칭 점프 |
+| `gm` | 다중 커서 |
+| `,.` | ESC 대체 (모든 모드) |
 
-Create a shell alias to run the new configuration, e.g. in `.bashrc` or `.zshrc` (or a `~/.config/shell-aliases` file that each shell rc file sources)
+### Insert/Command — Emacs 키바인딩
 
-```config
-alias astro5="NVIM_APPNAME=nvim-astro5 nvim"
-```
+| 키 | 동작 |
+|----|------|
+| `C-f` / `C-b` | 한 글자 앞/뒤 |
+| `M-f` / `M-b` | 한 단어 앞/뒤 |
+| `C-a` / `C-e` | 줄 처음/끝 |
+| `C-d` | 앞 글자 삭제 |
+| `M-d` | 앞 단어 삭제 |
+| `M-BS` | 뒤 단어 삭제 |
+| `C-k` | 줄 끝까지 삭제 |
+| `C-y` | 붙여넣기 |
 
-Load the alias into the current shell from the rc file or shell-aliases (or open a new shell), e.g.
+## 포함된 기능
 
-```shell
-source ~/.config/shell-aliases
-```
+- **Treesitter**: markdown, org, json, yaml, lua, python, bash 등 30개 언어 하이라이팅
+- **Org-mode**: nvim-orgmode + telescope 연동
+- **Git**: neogit (magit 대응) + diffview
+- **검색**: grug-far (프로젝트 전체 검색/치환)
+- **UI**: which-key (modern), snacks (dashboard/picker/explorer)
+- **편집**: nvim-surround, vim-visual-multi, trim.nvim, better-escape
+- **클립보드**: OSC 52 (SSH/Docker 환경)
 
-Run `astro5` and allow neovim plugins to automatically install and Treesitter language parsers to compile.
+## 없는 것 (의도적)
 
-```shell
-astro5
-```
-
-
-## Configuration overview
-
-The configuration is based on the AstroNvim v5 template config.  Changes to existing file have been kept to a minimum, except for `lua/community.lua` which has additional plugins from the AstroNvim Community repository.
-
-`lua/plugins/practicalli.lua` contains Practicalli specific configuration (plugins, preferences & key maps).  This also provides an example of how to modify and extend the AstroNvim configuration yourself.
-
-Set environment variable `PRACTICALLI_ASTRO` to false to skip the Practicalli config without requiring a code change.
-
-Create your own `lua/plugins/user-yourname.lua` file to:
-
-- override default plugin configuration
-- add new plugins (or create a new file for a plugin to make them easier to be optional)
-
-
-[Practicalli Astro5 config design](https://practical.li/neovim/reference/astro5-configuration/) provides a complete breakdown of this configuration.
-
-> NOTE: Lua files in the `lua/plugins` directory are loaded in alphabetical order so plugin overrides should be the last file to load, e.g `lua/plugins/user-*`
-
-
-### LSP Servers
-
-Install an LSP server for each programming language used, allowing the Neovim LSP client to obtain diagnostic information.
-
-Mason is used to automatically install LSP servers, format & lint tools.  [Mason Registry](https://mason-registry.dev/registry/list) maintains a list of the latest release for each tool (automatically updated).
-
-Mason can be configured to use a locally installed Clojure LSP server (using the [instructions for your operating system](https://clojure-lsp.io/installation/)).
-
-[lua/plugins/termux.lua](https://github.com/practicalli/nvim-astro5/blob/main/lua/plugins/termux.lua) shows how to configure mason to use a local Clojure and Lua LSP server (preventing Mason from automatically installing these tools)
-
-
-## Sponsor Practicalli
-
-[![Sponsor Practicalli via GitHub](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-johnny/)
-
-All sponsorship funds are used to support the continued development of [Practicalli series of books and videos](https://practical.li/), although most work is done at personal cost and time. Infrastructure costs are kept to zero.
-
-Thanks to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors) for your continued support
+LSP, Mason, DAP, 포매터, 린터, noice — 전부 없음.
+코드는 에이전트가 쓰고, 이건 읽고 편집하는 도구.
